@@ -1,5 +1,8 @@
 <template>
-  <div class="grid place-items-center h-screen">
+  <div
+    id="about"
+    class="grid place-items-center h-screen"
+  >
     About Us
   </div>
 </template>
@@ -7,7 +10,7 @@
 <script>
 export default {
   name: 'About',
-  transition: {
+  /*transition: {
     name: 'slide',
     mode: 'out-in',
     css: false,
@@ -39,7 +42,7 @@ export default {
         onComplete: done
       })
     }
-  },
+  },*/
   head () {
     return {
       title: 'About'

@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '~/pages/index'
-import Contact from '~/pages/contact'
-import About from '~/pages/about'
+const Index = () => import ('~/pages/index')
+const About = () => import ('~/pages/about')
+const Contact = () => import ('~/pages/contact')
+const Skills = () => import ('~/pages/skills')
+const Portfolio = () => import ('~/pages/portfolio')
+const Hireme = () => import ('~/pages/hireme')
 
 Vue.use(Router)
 
@@ -24,6 +27,21 @@ export function createRouter () {
         path: '/contact',
         name: 'contact',
         component: Contact
+      },
+      {
+        path: '/skills',
+        name: 'skills',
+        component: Skills
+      },
+      {
+        path: '/portfolio',
+        name: 'portfolio',
+        component: Portfolio
+      },
+      {
+        path: '/hireme',
+        name: 'hireme',
+        component: Hireme
       }
     ]
   })

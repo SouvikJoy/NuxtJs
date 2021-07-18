@@ -4,9 +4,10 @@
       <TheHeader id="Nav" />
     </header>
     <main>
+      <Sidebar />
       <nuxt :key="$route.fullPath" />
     </main>
-    <footer class="grid place-items-center h-10vh bg-secondary text-white">
+    <footer class="footer grid place-items-center bg-secondary text-white">
       <TheFooter />
     </footer>
   </div>
@@ -15,9 +16,11 @@
 <script>
 import TheHeader from '~/components/common/TheHeader'
 import TheFooter from '~/components/common/TheFooter'
+import Sidebar from '~/components/common/Sidebar'
 export default {
   name: 'Default',
   components: {
+    Sidebar,
     TheFooter,
     TheHeader
   }

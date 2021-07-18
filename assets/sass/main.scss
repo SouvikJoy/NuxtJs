@@ -1,21 +1,108 @@
-$primary: #41b782;
-$secondary: #35495e;
-
+$primary: hsla(170, 90%, 43%, 1.0);
+$secondary: hsla(211, 28%, 29%, 1.0);
+$white: hsla(0, 0%, 100%, 1.0);
+$black: hsla(0, 0%, 0%, 1.0);
+$facebook: hsla(215, 51%, 42%, 1.0);
+$twitter: hsl(214, 100%, 57%);
+$google: hsl(0, 100%, 48%);
+$github: hsl(0, 0%, 28%);
 #App {
+  font-family: "SF Pro Rounded", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
+  background-image: url("~/assets/re-edited.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: exclusion;
 }
 #Nav {
-  background-color:($secondary);
+  background-color: transparent;
   height: 10vh;
 }
-
-a {
-  color: darkgray;
-  margin: 20px;
+.footer {
+  height: 10vh;
+  width: 100vw;
+  // background-color: $secondary;
+  position: absolute;
+  bottom: 0;
 }
-.nuxt-link-exact-active {
-  color: white;
-  font-weight: bold;
+.intro {
+  height: 100vh;
+}
+a {
+  color: hsla(0, 0%, 100%, 0.5);
+  margin: 20px;
+  &.nuxt-link-exact-active {
+    color: $white;
+    font-weight: bolder;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: $primary;
+  }
+}
+a:hover {
+  color: $white;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: hsla(170, 90%, 43%, 0.5);
+  transition-timing-function: ease-in-out;
+}
+.bubble {
+  background-color: $primary;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: .04em;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 20px 20px 20px 0;
+}
+#name, #email, #location, #phone {
+  color: $white;
+}
+#profession {
+  color: $white;
+  letter-spacing: 0.1em;
+}
+#email:hover , #location:hover, #phone:hover {
+  .svg_icon {
+    fill: hsla(170, 90%, 43%, 1.0);
+  }
+}
+.svg_icon {
+  fill: $white;
+}
+#login_Facebook, #login_Twitter, #login_Google, #login_Github {
+  fill: $black;
+  background-color: white;
+  margin: 0!important;
+}
+#login_Facebook:hover{
+  fill: red;
+}
+#login_Twitter:hover{
+  fill: yellow;
+}
+#login_Google:hover {
+  fill: blue;
+}
+#login_Github:hover{
+  fill: grey;
+}
+#sidebar {
+  left: 0;
+  top: 0;
+  height: 100vh;
+  position: fixed;
+}
+
+
+
+
+
+
+  // UnderDevelop Pages
+#about, #contact, #skills, #portfolio, #hireme {
+  font-size: 60px;
+  color: hsla(0, 0%, 100%, 1.0);
 }
