@@ -1,0 +1,21 @@
+$primary: #41b782;
+$secondary: #35495e;
+
+#App {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+#Nav {
+  background-color:($secondary);
+  height: 10vh;
+}
+
+a {
+  color: darkgray;
+  margin: 20px;
+}
+.nuxt-link-exact-active {
+  color: white;
+  font-weight: bold;
+}
