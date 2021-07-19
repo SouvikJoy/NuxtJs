@@ -3,7 +3,7 @@ module.exports = {
     content: [
       '~/pages/index.vue',
       '~/pages/about.vue',
-      '_nuxt/pages/contact.vue',
+      '~/pages/contact.vue',
       '~/pages/skills.vue',
       '~/pages/portfolio.vue',
       '~/pages/hireme.vue',
@@ -15,9 +15,8 @@ module.exports = {
       'index.html',
       '_nuxt/vendor/app.js'
     ],
-
     options: {
-      safelist: [],
+      safelist: ['text-center', 'p-10', 'grid'],
       blocklist: [/^debug-/]
     },
   }

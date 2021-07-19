@@ -64,8 +64,10 @@ export default {
     '@nuxtjs/pwa'
   ],
   gsap: {
-    scrollTrigger: true,
-    scrollTo: true
+    extraPlugins: {
+      scrollTrigger: true,
+      scrollTo: true
+    }
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

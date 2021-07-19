@@ -104,8 +104,6 @@
         </defs>
       </svg>
     </AsyncButton>
-
-
     <AsyncButton
       id="login_Twitter"
       button-class="async-button"
@@ -219,8 +217,6 @@
         </defs>
       </svg>
     </AsyncButton>
-
-
     <AsyncButton
       id="login_Google"
       button-class="async-button"
@@ -323,8 +319,6 @@
         </defs>
       </svg>
     </AsyncButton>
-
-
     <AsyncButton
       id="login_Github"
       button-class="async-button"

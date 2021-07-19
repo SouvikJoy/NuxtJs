@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <div class="intro grid grid-cols-2 place-items-center">
       <div>
         <div class="mb-6">
@@ -77,12 +77,12 @@
           </ul>
         </div>
       </div>
-      <div>
-        <figure>
+      <div id="profile">
+        <figure class="profile_figure">
           <img
             src="~/assets/profile-img.webp"
             alt=""
-            class="rounded-full"
+            class="profile_image rounded-full"
           />
         </figure>
       </div>
@@ -132,6 +132,24 @@ export default {
   head () {
     return {
       title: 'Home'
+    }
+  },
+  mounted() {
+    this.animateOnScroll()
+  },
+  methods: {
+    animateOnScroll() {
+      // this.$gsap.to(window, { duration: 2, scrollTo: 1000 })
+      this.$gsap.to('#name', {
+        x: -500,
+        ease: 'Power1.easeInOut',
+        scrollTrigger: {
+          trigger: '#home',
+          pin: true,
+          // end: 'bottom',
+          scrub: true
+        }
+      })
     }
   }
 }

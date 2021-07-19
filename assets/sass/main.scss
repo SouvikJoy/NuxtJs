@@ -2,15 +2,12 @@ $primary: hsla(170, 90%, 43%, 1.0);
 $secondary: hsla(211, 28%, 29%, 1.0);
 $white: hsla(0, 0%, 100%, 1.0);
 $black: hsla(0, 0%, 0%, 1.0);
-$facebook: hsla(215, 51%, 42%, 1.0);
-$twitter: hsl(214, 100%, 57%);
-$google: hsl(0, 100%, 48%);
-$github: hsl(0, 0%, 28%);
+
+
 #App {
   font-family: "SF Pro Rounded", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  height: 100vh;
   background-image: url("~/assets/re-edited.webp");
   background-repeat: no-repeat;
   background-size: cover;
