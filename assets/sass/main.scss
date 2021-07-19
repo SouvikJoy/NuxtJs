@@ -73,21 +73,7 @@ a:hover {
   fill: $white;
 }
 #login_Facebook, #login_Twitter, #login_Google, #login_Github {
-  fill: $black;
-  background-color: white;
   margin: 0!important;
-}
-#login_Facebook:hover{
-  fill: red;
-}
-#login_Twitter:hover{
-  fill: yellow;
-}
-#login_Google:hover {
-  fill: blue;
-}
-#login_Github:hover{
-  fill: grey;
 }
 #sidebar {
   left: 0;
@@ -95,6 +81,23 @@ a:hover {
   height: 100vh;
   position: fixed;
 }
+#facebook_mainFrame, #twitter_mainFrame, #google_mainFrame, #linkedin_mainFrame {
+  opacity: 20%;
+}
+#facebook_mainFrame:hover, #twitter_mainFrame:hover, #google_mainFrame:hover, #linkedin_mainFrame:hover {
+  opacity: 100%;
+  transition: ease 2s;
+  #facebook_container , #twitter_container, #google_container, #linkedin_container {
+    transform: scale(1.5) translate(-20px, -45px);
+    transition: ease 2s;
+  }
+}
+
+
+
+
+
+
 
 
 
