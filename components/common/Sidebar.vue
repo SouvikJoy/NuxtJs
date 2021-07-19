@@ -4,10 +4,8 @@
   >
     <AsyncButton
       id="login_Facebook"
-      button-class="async-button"
-      click-action="#"
-      disabled="false"
-      href="https://www.facebook.com"
+      button-class="async-button facebook"
+      click-action="clicked"
     >
       <svg
         width="100"
@@ -25,6 +23,7 @@
             height="100"
             transform="translate(0 270) rotate(-90)"
             fill="#4267B2"
+            class="fa-rect"
           />
           <g
             id="facebook_container"
@@ -106,10 +105,8 @@
     </AsyncButton>
     <AsyncButton
       id="login_Twitter"
-      button-class="async-button"
-      click-action="#"
-      disabled="false"
-      href="https://www.twitter.com"
+      button-class="async-button twitter"
+      click-action="clicked"
     >
       <svg
         width="100"
@@ -127,6 +124,7 @@
             height="100"
             transform="translate(0 270) rotate(-90)"
             fill="#1DA1F2"
+            class="twi-rect"
           />
           <g
             id="twitter_container"
@@ -219,10 +217,8 @@
     </AsyncButton>
     <AsyncButton
       id="login_Google"
-      button-class="async-button"
-      click-action="#"
-      disabled="false"
-      href="https://www.google.com"
+      button-class="async-button google"
+      click-action="clicked"
     >
       <svg
         width="100"
@@ -240,6 +236,7 @@
             height="100"
             transform="translate(0 270) rotate(-90)"
             fill="#EA4335"
+            class="go-rect"
           />
           <g
             id="google_container"
@@ -320,11 +317,9 @@
       </svg>
     </AsyncButton>
     <AsyncButton
-      id="login_Github"
-      button-class="async-button"
-      click-action="#"
-      disabled="false"
-      href="https://www.github.com"
+      id="login_Linkedin"
+      button-class="async-button linkedin"
+      click-action="clicked"
     >
       <svg
         width="100"
@@ -342,6 +337,7 @@
             height="100"
             transform="translate(0 270) rotate(-90)"
             fill="#0077B5"
+            class="li-rect"
           />
           <g
             id="linkedin_container"
@@ -442,6 +438,24 @@ export default {
   name: 'Sidebar',
   components: {
     AsyncButton
+  },
+  mounted () {
+    this.anima()
+  },
+  methods: {
+    anima () {
+      const tl = this.$gsap.timeline({repeat: 10, repeatDelay: 5});
+      tl.fromTo('.li-rect, .go-rect, .twi-rect, .fa-rect',
+        {
+          width: 0,
+        },
+        {
+          width: 270,
+          duration: 2,
+          stagger: -1.5
+        }
+      );
+    }
   }
 }
 </script>

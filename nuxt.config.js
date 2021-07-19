@@ -65,8 +65,19 @@ export default {
   ],
   gsap: {
     extraPlugins: {
+      cssRule: true,
+      draggable: true,
+      easel: true,
+      motionPath: true,
+      pixi: true,
+      text: true,
+      scrollTo: true,
       scrollTrigger: true,
-      scrollTo: true
+    },
+    extraEases: {
+      expoScaleEase: true,
+      roughEase: true,
+      slowMo: true,
     }
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

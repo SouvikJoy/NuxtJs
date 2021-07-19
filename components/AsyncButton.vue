@@ -2,7 +2,7 @@
   <component
     :is="type"
     :href="href"
-    disabled="disabled"
+    :disabled="disabled"
     :class="buttonClass"
     @click="click"
   >

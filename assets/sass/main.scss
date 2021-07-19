@@ -1,34 +1,37 @@
 $primary: hsla(170, 90%, 43%, 1.0);
+$primary-50: hsla(170, 90%, 43%, 0.5);
 $secondary: hsla(211, 28%, 29%, 1.0);
 $white: hsla(0, 0%, 100%, 1.0);
+$white-50: hsla(0, 0%, 100%, 0.5);
 $black: hsla(0, 0%, 0%, 1.0);
+$facebook: hsla(220, 46%, 48%, 1.0);
+$twitter: hsla(206, 88%, 59%, 1.0);
+$google: hsla(5, 81%, 56%, 1.0);
+$linkedin: hsla(206, 64%, 43%, 1.0);
 
 
 #App {
   font-family: "SF Pro Rounded", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-color: $secondary;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: exclusion;
+  min-height: 300vh;
+}
+header {
+  background-color: transparent;
+}
+.home {
+  height: 100vh;
   background-image: url("~/assets/re-edited.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: exclusion;
 }
-#Nav {
-  background-color: transparent;
-  height: 10vh;
-}
-.footer {
-  height: 10vh;
-  width: 100vw;
-  // background-color: $secondary;
-  position: absolute;
-  bottom: 0;
-}
-.intro {
-  height: 100vh;
-}
 a {
-  color: hsla(0, 0%, 100%, 0.5);
+  color: $white-50;
   margin: 20px;
   &.nuxt-link-exact-active {
     color: $white;
@@ -42,10 +45,16 @@ a:hover {
   color: $white;
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: hsla(170, 90%, 43%, 0.5);
+  border-bottom-color: $primary-50;
   transition-timing-function: ease-in-out;
 }
+.hello_text {
+  position: relative;
+}
 .bubble {
+  position: absolute;
+  top: 250px;
+  left: 350px;
   background-color: $primary;
   font-size: 14px;
   line-height: 24px;
@@ -63,23 +72,11 @@ a:hover {
 }
 #email:hover , #location:hover, #phone:hover {
   .svg_icon {
-    fill: hsla(170, 90%, 43%, 1.0);
+    fill: $primary
   }
 }
 .svg_icon {
   fill: $white;
-}
-#login_Facebook, #login_Twitter, #login_Google, #login_Github {
-  margin: 0!important;
-}
-#sidebar {
-  left: 0;
-  top: 0;
-  height: 100vh;
-  position: fixed;
-}
-#facebook_mainFrame, #twitter_mainFrame, #google_mainFrame, #linkedin_mainFrame {
-  opacity: 20%;
 }
 #facebook_mainFrame:hover, #twitter_mainFrame:hover, #google_mainFrame:hover, #linkedin_mainFrame:hover {
   opacity: 100%;
@@ -89,11 +86,47 @@ a:hover {
     transition: ease 2s;
   }
 }
-
-
-
-
-
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0!important;
+  z-index: 2;
+}
+.facebook {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.twitter {
+  position: absolute;
+  top: 220px;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.google {
+  position: absolute;
+  top: 440px;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.linkedin {
+  position: absolute;
+  top: 660px;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.gradient-divider {
+  position: absolute;
+  width: 100vw;
+  height: 298px;
+  background: linear-gradient(199.88deg, rgba(46, 52, 68, 0) -17.89%, #2E3444 32.6%, #24272E 80.47%, rgba(36, 39, 46, 0) 175.38%);
+}
 
 
 
