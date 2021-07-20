@@ -24,44 +24,55 @@ export default {
   loading: { color: 'hsla(211, 28%, 29%, 1)' },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/sass/main.scss'
+    '~assets/sass/main.scss'
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [{
+    src: '~plugins/vue-scrollmagic.js',
+    ssr: false
+  }],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
-    'nuxt-purgecss'
+    'nuxt-windicss',
+    '@aceforth/nuxt-optimized-images',
   ],
-  purgeCSS: {
-    extractors: () => [
-      {
-        extractor(content) {
-          return content.match(/[A-z0-9-:\\/]+/g)
-        },
-        extensions: ['html', 'vue', 'js']
+  windicss: {
+    scan: {
+      dirs: ['./'],
+      exclude: [
+        'node_modules',
+        'dist',
+        '.git',
+        '.github',
+        '.nuxt',
+        // testing files & folders
+        'coverage',
+        '**/__snapshots__',
+        '*.test.js',
+      ],
+    },
+    preflight: {
+      alias: {
+        // add nuxt aliases
+        'nuxt-link': 'a',
+        // @nuxt/image module
+        'nuxt-img': 'img',
       },
-      {
-        extractor(content) {
-          return content.match(/[A-z0-9-\\/]+/g)
-        },
-        extensions: ['vue'] // This will not work, because the above extractor is applied to 'vue' already.
-      }
-    ]
+    },
+  },
+  optimizedImages: {
+    optimizeImages: true
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-gsap-module',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
   ],
   gsap: {
     extraPlugins: {

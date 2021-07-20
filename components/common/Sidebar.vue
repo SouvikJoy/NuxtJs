@@ -1,10 +1,11 @@
 <template>
   <div
     id="sidebar"
+    class="w-screen"
   >
     <AsyncButton
       id="login_Facebook"
-      button-class="async-button facebook"
+      button-class="button async-button facebook"
       click-action="clicked"
     >
       <svg
@@ -105,7 +106,7 @@
     </AsyncButton>
     <AsyncButton
       id="login_Twitter"
-      button-class="async-button twitter"
+      button-class="button async-button twitter"
       click-action="clicked"
     >
       <svg
@@ -217,7 +218,7 @@
     </AsyncButton>
     <AsyncButton
       id="login_Google"
-      button-class="async-button google"
+      button-class="button async-button google"
       click-action="clicked"
     >
       <svg
@@ -318,7 +319,7 @@
     </AsyncButton>
     <AsyncButton
       id="login_Linkedin"
-      button-class="async-button linkedin"
+      button-class="button async-button linkedin"
       click-action="clicked"
     >
       <svg

@@ -1,11 +1,23 @@
 <template>
-  <div
-    id="about"
-    class="grid place-items-center h-screen"
-  >
-    <p class="text_about">
-      About Us
-    </p>
+  <div id="map">
+    <div class="item item1">
+      item 1
+    </div>
+    <div class="item item2">
+      item 2
+    </div>
+    <div class="item item3">
+      item 3
+    </div>
+    <div class="item item4">
+      item 4
+    </div>
+    <div class="item item5">
+      item 5
+    </div>
+    <div class="item item6">
+      item 6
+    </div>
   </div>
 </template>
 
@@ -16,10 +28,78 @@ export default {
     return {
       title: 'About'
     }
-  }
-}
+  },
+  mounted() {
+    /*
+    var slides = document.querySelectorAll(".piece");
+
+		// create scene for every slide
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+					triggerElement: slides[i]
+				})
+				.setPin(slides[i], {pushFollowers: false})
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+		}
+    */
+    let items = document.querySelectorAll(".item");
+    for (let i = 0; i < items.length; i++) {
+      const scene = this.$scrollmagic
+        .scene({
+          triggerElement: items[i],
+        })
+        .setPin(items[i], { pushFollowers: false })
+        .addIndicators({ name: "scene" + [i] });
+      this.$scrollmagic.addScene(scene);
+    }
+    // const scene1 = this.$scrollmagic
+    //   .scene({
+    //     triggerElement: ".intro1",
+    //     triggerHook: 0,
+    //     duration: "100%",
+    //   })
+    //   .setPin(".intro1", { pushFollowers: false })
+    //   .addIndicators({ name: "scene1" });
+    // this.$scrollmagic.addScene(scene1);
+  },
+};
 </script>
 
-<style scoped>
-
+<style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#map {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  .item {
+    height: 100vh;
+    line-height: 500px;
+    font-size: 50px;
+    text-align: center;
+    &.item1 {
+      background-color: #f5a89a;
+    }
+    &.item2 {
+      background-color: #efd591;
+    }
+    &.item3 {
+      background-color: #c090ec;
+    }
+    &.item4 {
+      background-color: #ecc5a9;
+    }
+    &.item5 {
+      background-color: #8ff3f3;
+    }
+    &.item6 {
+      background-color: #cfbe94;
+    }
+  }
+}
 </style>

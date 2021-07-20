@@ -4,7 +4,6 @@
     :href="href"
     :disabled="disabled"
     :class="buttonClass"
-    @click="click"
   >
     <slot></slot>
   </component>
@@ -14,10 +13,10 @@
 export default {
   name: 'AsyncButton',
   props: {
-    clickAction: {
+    /*clickAction: {
       type: Function,
       required: true
-    },
+    },*/
     disabled: {
       type: Boolean,
       default: false
@@ -44,11 +43,11 @@ export default {
       }
     }
   },
-  methods: {
+  /*methods: {
     async click() {
       await this.clickAction();
     }
-  }
+  }*/
 }
 </script>
 

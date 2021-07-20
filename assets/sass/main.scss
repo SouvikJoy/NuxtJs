@@ -1,51 +1,35 @@
-$primary: hsla(170, 90%, 43%, 1.0);
-$primary-50: hsla(170, 90%, 43%, 0.5);
-$secondary: hsla(211, 28%, 29%, 1.0);
-$white: hsla(0, 0%, 100%, 1.0);
-$white-50: hsla(0, 0%, 100%, 0.5);
-$black: hsla(0, 0%, 0%, 1.0);
-$facebook: hsla(220, 46%, 48%, 1.0);
-$twitter: hsla(206, 88%, 59%, 1.0);
-$google: hsla(5, 81%, 56%, 1.0);
-$linkedin: hsla(206, 64%, 43%, 1.0);
-
-
+@use 'variables';
 #App {
-  font-family: "SF Pro Rounded", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: $secondary;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: exclusion;
-  min-height: 300vh;
+  height: 600vh;
+  font-family: "SF Pro Rounded", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
 }
 header {
   background-color: transparent;
-}
-.home {
-  height: 100vh;
-  background-image: url("~/assets/re-edited.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: exclusion;
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
 }
 a {
-  color: $white-50;
+  color: hsla(0, 0%, 100%, 1.0);
   margin: 20px;
   &.nuxt-link-exact-active {
-    color: $white;
+    //color: hsla(0, 0%, 100%, 1.0);
     font-weight: bolder;
     border-bottom-style: solid;
     border-bottom-width: 3px;
-    border-bottom-color: $primary;
+    border-bottom-color: hsla(170, 90%, 43%, 1.0);
   }
 }
 a:hover {
-  color: $white;
+  //color: hsla(0, 0%, 100%, 1.0);
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: $primary-50;
+  border-bottom-color: hsla(170, 90%, 43%, 0.5);
   transition-timing-function: ease-in-out;
 }
 .hello_text {
@@ -55,7 +39,7 @@ a:hover {
   position: absolute;
   top: 250px;
   left: 350px;
-  background-color: $primary;
+  background-color: hsla(170, 90%, 43%, 1.0);
   font-size: 14px;
   line-height: 24px;
   letter-spacing: .04em;
@@ -64,19 +48,19 @@ a:hover {
   border-radius: 20px 20px 20px 0;
 }
 #name, #email, #location, #phone {
-  color: $white;
+  //color: hsla(0, 0%, 100%, 1.0);
 }
 #profession {
-  color: $white;
+  //color: hsla(0, 0%, 100%, 1.0);
   letter-spacing: 0.1em;
 }
 #email:hover , #location:hover, #phone:hover {
   .svg_icon {
-    fill: $primary
+    fill: hsla(170, 90%, 43%, 1.0);
   }
 }
 .svg_icon {
-  fill: $white;
+  //fill: hsla(0, 0%, 100%, 1.0);
 }
 #facebook_mainFrame:hover, #twitter_mainFrame:hover, #google_mainFrame:hover, #linkedin_mainFrame:hover {
   opacity: 100%;
@@ -92,6 +76,11 @@ a:hover {
   left: 0;
   margin: 0!important;
   z-index: 2;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 100%);
+  backdrop-filter: blur(25px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 15px;
 }
 .facebook {
   position: absolute;
@@ -121,13 +110,10 @@ a:hover {
   height: 220px;
   width: 100px;
 }
-.gradient-divider {
-  position: absolute;
-  width: 100vw;
-  height: 298px;
-  background: linear-gradient(199.88deg, rgba(46, 52, 68, 0) -17.89%, #2E3444 32.6%, #24272E 80.47%, rgba(36, 39, 46, 0) 175.38%);
+.profile_image {
+  height: 450px;
+  width: 450px;
 }
-
 
 
 
@@ -136,6 +122,6 @@ a:hover {
 
   // UnderDevelop Pages
 #about, #contact, #skills, #portfolio, #hireme {
-  font-size: 60px;
-  color: hsla(0, 0%, 100%, 1.0);
+  //font-size: 60px;
+  //color: hsla(0, 0%, 100%, 1.0);
 }
