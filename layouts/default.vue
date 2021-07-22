@@ -3,15 +3,15 @@
     id="App"
     class="default_app"
   >
-    <header class="bg-transparent w-screen fixed">
+    <header class="default_header">
       <TheHeader />
     </header>
-    <main>
+    <main class="default_main">
       <div>
         <nuxt :key="$route.fullPath" />
       </div>
     </main>
-    <footer class="bg-secondary">
+    <footer class="default_footer">
       <TheFooter />
     </footer>
   </div>
@@ -26,6 +26,23 @@ export default {
     TheFooter,
     TheHeader
   },
+  mounted() {
+    this.animateOnScroll()
+  },
+  methods: {
+    animateOnScroll () {
+      const scene1 = this.$scrollmagic.scene({
+        triggerElement: '.index_page_2',
+        triggerHook: 0,
+        duration: "100%"
+      })
+        .setTween('header', {
+            backgroundColor: 'hsla(211, 29%, 24%, 1.0)',
+            scale: 1.2,
+        })
+      this.$scrollmagic.addScene(scene1)
+    }
+  }
 }
 </script>
 

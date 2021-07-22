@@ -30,11 +30,13 @@ export default defineConfig({
   shortcuts: {
     // Default
     default_app: 'font-uirounded text-secondary',
-    portfolio_header: 'grid grid-cols-2 place-items-center justify-between py-[20px]',
-    portfolio_main: '',
+    default_header: 'bg-transparent w-screen bg-secondary fixed z-40',
+    default_footer: 'text-center',
+    //Component
+    portfolio_header: 'flex place-items-center justify-around py-[20px]',
     portfolio_footer: '',
     // Router
-    portfolio_nuxt_link: 'dark:text-white m-[20px] hover:(border-b-solid border-b-[3px] border-b-primary)',
+    portfolio_nuxt_link: 'text-white m-[20px] hover:(border-b-solid border-b-[3px] border-b-primary)',
     portfolio_nuxt_link_exact_active:'font-bolder border-b-solid border-b-[3px] border-b-primary',
     // Index Page-1
     index_page_1: 'p-20 xl:pt-0 grid grid-cols-1 xl:grid-cols-2 place-items-center bg-gray-300 dark:text-white dark:bg-gray-900 h-screen',
@@ -57,6 +59,10 @@ export default defineConfig({
     index_page_4: 'p-20 xl:pt-0 grid grid-cols-1 xl:grid-cols-2 place-items-center bg-gray-600 dark:text-white dark:bg-gray-300 h-screen',
     index_page_5: 'p-20 xl:pt-0 grid grid-cols-1 xl:grid-cols-2 place-items-center bg-gray-700 dark:text-white dark:bg-gray-200 h-screen',
     index_page_6: 'p-20 xl:pt-0 grid grid-cols-1 xl:grid-cols-2 place-items-center bg-gray-800 dark:text-white dark:bg-gray-100 h-screen',
+    //shapes
+    shape_hexagon: 'relative w-[300px] h-[150px] bg-primary my-[90px] mx-[0] before:(content \'\' absolute w-0 border-l-[150px] border-l-solid border-l-transparent border-r-[150px] border-r-solid border-r-transparent bottom-[100%] border-b-[87px] border-b-solid border-b-primary) after:(content \'\' absolute w-0 border-l-[150px] border-l-solid border-l-transparent border-r-[150px] border-r-solid border-r-transparent top-[100%] border-t-[87px] border-t-solid border-t-primary)'
+
+
   },
   plugins: [],
 })

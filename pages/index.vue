@@ -1,6 +1,9 @@
 <template>
   <div class="index_page">
-    <div class="index_page_1">
+    <div
+      id="page_1"
+      class="index_page_1"
+    >
       <div class="index_page_1_container">
         <div class="index_page_1_greeting_bubble_container">
           <span
@@ -83,7 +86,10 @@
         />
       </figure>
     </div>
-    <div class="index_page_2">
+    <div
+      id="page_2"
+      class="index_page_2"
+    >
       <p>
         2
       </p>
@@ -119,36 +125,30 @@ export default {
   },
   methods: {
     animateOn () {
-      const scene1 = this.$scrollmagic.scene({
-        triggerElement: '.index_page_1',
-        triggerHook: 1,
-        duration: "100%"
-      })
-        .setTween('.index_page_1_portfolio_author_profile_image', {
-          css: {
-            x: 500,
-            opacity: 0
+      this.$gsap.to('.index_page_1_portfolio_author_name , .index_page_1_portfolio_author_profession, .index_page_1_portfolio_author_email_container, .index_page_1_portfolio_author_phone_container, .index_page_1_portfolio_author_location_container', {
+          x: -800,
+          stagger: 0.5,
+          duration: 10,
+          scrollTrigger: {
+            trigger: '.index_page_1',
+            pin: true,
+            end: 'bottom',
+            scrub: true
           }
-        })
-        .addIndicators({name: 'page_1 (duration: 300)'})
-      this.$scrollmagic.addScene(scene1)
-      const scene2 = this.$scrollmagic.scene({
-        triggerElement: '.index_page_1',
-        triggerHook: 0,
-        duration: "100%"
-      })
-        .setTween('.index_page_1_portfolio_author_name,' +
-          ' .index_page_1_portfolio_author_profession,' +
-          ' .index_page_1_portfolio_author_email_container,' +
-          ' .index_page_1_portfolio_author_phone_container,' +
-          ' .index_page_1_portfolio_author_location_container', {
-          css: {
-            x: -500,
-            opacity: 0
+        },
+      )
+      this.$gsap.to('.index_page_1_portfolio_author_profile_image', {
+          x: 800,
+          stagger: 0.5,
+          duration: 10,
+          scrollTrigger: {
+            trigger: '.index_page_1',
+            pin: true,
+            end: 'bottom',
+            scrub: true
           }
-        })
-        .addIndicators({name: 'page_2 (duration: 300)'})
-      this.$scrollmagic.addScene(scene2)
+        },
+      )
     }
   }
 }

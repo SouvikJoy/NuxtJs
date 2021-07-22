@@ -1,9 +1,9 @@
 <template>
   <div
     id="about"
-    class="grid place-items-center h-screen"
+    class="h-screen"
   >
-    About
+    s
   </div>
 </template>
 
