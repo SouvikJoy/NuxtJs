@@ -1,7 +1,7 @@
 <template>
   <div
     id="App"
-    class="font-uirounded text-primary-text"
+    class="default_app"
   >
     <header class="bg-transparent w-screen fixed">
       <TheHeader />

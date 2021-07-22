@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 place-items-center justify-between py-[20px]">
+  <div class="portfolio_header">
     <div>
       <!--      Header Logo Section-->
       <NuxtLink
