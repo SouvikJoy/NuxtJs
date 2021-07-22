@@ -20,7 +20,10 @@ export default {
       devtools: true
     }
   },
-  loading: { color: 'hsla(211, 28%, 29%, 1)' },
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
   css: [
     '~assets/sass/main.scss'
   ],
