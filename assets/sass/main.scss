@@ -1,0 +1,152 @@
+#App {
+  display: grid;
+  //grid-template-rows: auto 1fr auto;
+  //height: 600vh;
+  font-family: "SF Pro Rounded", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+header {
+  background-color: transparent;
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
+}
+.nuxt-link {
+  //color: hsla(0, 0%, 100%, 1.0);
+}
+a {
+  //color: hsla(0, 0%, 100%, 1.0);
+  margin: 20px;
+  &.nuxt-link-exact-active {
+    //color: hsla(0, 0%, 100%, 1.0);
+    font-weight: bolder;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: hsla(170, 90%, 43%, 1.0);
+  }
+}
+a:hover {
+  //color: hsla(0, 0%, 100%, 1.0);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: hsla(170, 90%, 43%, 0.5);
+  transition-timing-function: ease-in-out;
+}
+.hello_text {
+  position: relative;
+}
+.bubble {
+  //position: absolute;
+  //top: 250px;
+  //left: 350px;
+  background-color: hsla(170, 90%, 43%, 1.0);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: .04em;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 20px 20px 20px 0;
+}
+#name, #email, #location, #phone {
+  //color: hsla(0, 0%, 100%, 1.0);
+}
+#profession {
+  //color: hsla(0, 0%, 100%, 1.0);
+  letter-spacing: 0.1em;
+}
+#email:hover , #location:hover, #phone:hover {
+  .svg_icon {
+    fill: hsla(170, 90%, 43%, 1.0);
+  }
+}
+.svg_icon {
+  fill: hsla(0, 0%, 100%, 1.0);
+}
+#facebook_mainFrame:hover, #twitter_mainFrame:hover, #google_mainFrame:hover, #linkedin_mainFrame:hover {
+  opacity: 100%;
+  transition: ease 2s;
+  #facebook_container , #twitter_container, #google_container, #linkedin_container {
+    transform: scale(1.5) translate(-20px, -45px);
+    transition: ease 2s;
+  }
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0!important;
+  z-index: 2;
+  background: transparent;
+  //background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 100%);
+  backdrop-filter: blur(25px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 15px;
+}
+.facebook {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.twitter {
+  position: absolute;
+  top: 220px;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.google {
+  position: absolute;
+  top: 440px;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.linkedin {
+  position: absolute;
+  top: 660px;
+  left: 0;
+  height: 220px;
+  width: 100px;
+}
+.profile_image {
+  height: 450px;
+  width: 450px;
+}
+#landing_page {
+  .page {
+    height: 100vh;
+    &.page1 {
+      //background-color: #cbcbcb;
+    }
+    &.page2 {
+      background-color: #efd591;
+    }
+    &.page3 {
+      background-color: #c090ec;
+    }
+    &.page4 {
+      background-color: #ecc5a9;
+    }
+    &.page5 {
+      background-color: #8ff3f3;
+    }
+    &.page6 {
+      background-color: #cfbe94;
+    }
+  }
+}
+
+
+
+
+
+  // UnderDevelop Pages
+#about, #contact, #skills, #portfolio, #hireme {
+  //font-size: 60px;
+  //color: hsla(0, 0%, 100%, 1.0);
+}
