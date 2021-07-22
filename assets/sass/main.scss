@@ -1,8 +1,7 @@
-@use 'variables';
 #App {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 600vh;
+  //grid-template-rows: auto 1fr auto;
+  //height: 600vh;
   font-family: "SF Pro Rounded", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,8 +13,11 @@ header {
   position: fixed;
   width: 100vw;
 }
+.nuxt-link {
+  //color: hsla(0, 0%, 100%, 1.0);
+}
 a {
-  color: hsla(0, 0%, 100%, 1.0);
+  //color: hsla(0, 0%, 100%, 1.0);
   margin: 20px;
   &.nuxt-link-exact-active {
     //color: hsla(0, 0%, 100%, 1.0);
@@ -36,9 +38,9 @@ a:hover {
   position: relative;
 }
 .bubble {
-  position: absolute;
-  top: 250px;
-  left: 350px;
+  //position: absolute;
+  //top: 250px;
+  //left: 350px;
   background-color: hsla(170, 90%, 43%, 1.0);
   font-size: 14px;
   line-height: 24px;
@@ -60,7 +62,7 @@ a:hover {
   }
 }
 .svg_icon {
-  //fill: hsla(0, 0%, 100%, 1.0);
+  fill: hsla(0, 0%, 100%, 1.0);
 }
 #facebook_mainFrame:hover, #twitter_mainFrame:hover, #google_mainFrame:hover, #linkedin_mainFrame:hover {
   opacity: 100%;
@@ -76,7 +78,8 @@ a:hover {
   left: 0;
   margin: 0!important;
   z-index: 2;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 100%);
+  background: transparent;
+  //background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 100%);
   backdrop-filter: blur(25px);
   /* Note: backdrop-filter has minimal browser support */
 
@@ -114,7 +117,29 @@ a:hover {
   height: 450px;
   width: 450px;
 }
-
+#landing_page {
+  .page {
+    height: 100vh;
+    &.page1 {
+      //background-color: #cbcbcb;
+    }
+    &.page2 {
+      background-color: #efd591;
+    }
+    &.page3 {
+      background-color: #c090ec;
+    }
+    &.page4 {
+      background-color: #ecc5a9;
+    }
+    &.page5 {
+      background-color: #8ff3f3;
+    }
+    &.page6 {
+      background-color: #cfbe94;
+    }
+  }
+}
 
 
 

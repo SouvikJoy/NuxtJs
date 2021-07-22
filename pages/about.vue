@@ -30,19 +30,6 @@ export default {
     }
   },
   mounted() {
-    /*
-    var slides = document.querySelectorAll(".piece");
-
-		// create scene for every slide
-		for (var i=0; i<slides.length; i++) {
-			new ScrollMagic.Scene({
-					triggerElement: slides[i]
-				})
-				.setPin(slides[i], {pushFollowers: false})
-				.addIndicators() // add indicators (requires plugin)
-				.addTo(controller);
-		}
-    */
     let items = document.querySelectorAll(".item");
     for (let i = 0; i < items.length; i++) {
       const scene = this.$scrollmagic
@@ -53,15 +40,6 @@ export default {
         .addIndicators({ name: "scene" + [i] });
       this.$scrollmagic.addScene(scene);
     }
-    // const scene1 = this.$scrollmagic
-    //   .scene({
-    //     triggerElement: ".intro1",
-    //     triggerHook: 0,
-    //     duration: "100%",
-    //   })
-    //   .setPin(".intro1", { pushFollowers: false })
-    //   .addIndicators({ name: "scene1" });
-    // this.$scrollmagic.addScene(scene1);
   },
 };
 </script>

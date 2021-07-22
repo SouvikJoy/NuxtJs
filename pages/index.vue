@@ -1,6 +1,6 @@
 <template>
   <div id="landing_page">
-    <div class="page page-1 home grid grid-cols-2 place-items-center">
+    <div class="page page1 home grid grid-cols-1 xl:grid-cols-2 place-items-center dark: bg-gray-300 dark:text-white dark:bg-gray-900">
       <div>
         <div class="mb-6">
           <span
@@ -89,19 +89,19 @@
         />
       </figure>
     </div>
-    <div class="page page-2">
+    <div class="page page2">
       2
     </div>
-    <div class="page page-3">
+    <div class="page page3">
       3
     </div>
-    <div class="page page-4">
+    <div class="page page4">
       4
     </div>
-    <div class="page page-5">
+    <div class="page page5">
       5
     </div>
-    <div class="page page-6">
+    <div class="page page6">
       6
     </div>
   </div>
@@ -119,27 +119,27 @@ export default {
     }
   },
   mounted() {
-    this.animateOnScroll()
+    this.animateOnScroll();
     let pages = document.querySelectorAll(".page");
     for (let i = 0; i < pages.length; i++) {
       const scene = this.$scrollmagic
         .scene({
           triggerElement: pages[i],
         })
-        .setPin(pages[i], { pushFollowers: false })
+        //.setPin(pages[i], { pushFollowers: false })
         .addIndicators({ name: "scene" + [i] });
       this.$scrollmagic.addScene(scene);
     }
     this.anima()
-     const scene1 = this.$scrollmagic
+     /*const scene1 = this.$scrollmagic
        .scene({
-         triggerElement: ".page3",
+         triggerElement: ".page-3",
          triggerHook: 0,
          duration: "100%",
        })
-       .setPin(".page3", { pushFollowers: false })
-       .addIndicators({ name: "scene1" });
-     this.$scrollmagic.addScene(scene1);
+       //.setPin(".page3", { pushFollowers: false })
+       //.addIndicators({ name: "scene1" });
+     this.$scrollmagic.addScene(scene1);*/
   },
   methods: {
     animateOnScroll() {
@@ -148,7 +148,7 @@ export default {
         stagger: 0.5,
         ease: 'Power1.easeInOut',
         scrollTrigger: {
-          trigger: '.page-1',
+          trigger: '.page1',
           pin: true,
           // end: 'bottom',
           scrub: true
@@ -159,7 +159,7 @@ export default {
         stagger: 0.5,
         ease: 'Power1.easeInOut',
         scrollTrigger: {
-          trigger: '.page-1',
+          trigger: '.page1',
           pin: true,
           end: 'bottom',
           scrub: true
@@ -167,73 +167,45 @@ export default {
       }))
     },
     anima( ) {
-      const tl = this.$gsap.timeline({repeat: 20, repeatDelay: 10});
+      const tl = this.$gsap.timeline({repeat: 0, repeatDelay: 0 });
       tl.fromTo('span#hello.bubble',
         {
-            x: -800,
-            scale: 0.8
+          x: -800,
+          scale: 0.8
         },
         {
-            x: 0,
-            scale: 2,
-            duration: 1
+          x: 0,
+          scale: 2,
+          duration: 1
         }
-      );
+      )
       tl.fromTo('#name , #profession, #email, #phone, #location',
         {
-            x: -700
+          x: -700
         },
         {
-            x: 0,
-            duration: 2,
-            stagger: 0.5
+          x: 0,
+          duration: 2,
+          stagger: 0.5
         }
-      );
+      )
       tl.fromTo('.fig',
         {
-            x: 1800
+          x: 1800
         },
         {
-            x: 0,
-            scale: 1.2,
-            duration: 2,
-            stagger: 1
+          x: 0,
+          scale: 1.2,
+          duration: 2,
+          stagger: 1
         },
         "-=2"
       )
-      this.$gsap.to(window, { duration: 5, scrollTo: 1700, delay: 5 })
-      this.$gsap.to(window, { duration: 5, scrollTo: 2600, delay: 15 })
-      this.$gsap.to(window, { duration: 5, scrollTo: 3450, delay: 25 })
-      this.$gsap.to(window, { duration: 5, scrollTo: 4350, delay: 35 })
-      this.$gsap.to(window, { duration: 5, scrollTo: 5350, delay: 45 })
-      this.$gsap.to(window, { duration: 5, scrollTo: 0, delay: 55 });
     }
   }
 }
 </script>
 
 <style lang="scss">
-  #landing_page {
-    .page {
-      height: 100vh;
-      &.page-1 {
-        background-color: #cbcbcb;
-      }
-      &.page-2 {
-        background-color: #efd591;
-      }
-      &.page-3 {
-        background-color: #c090ec;
-      }
-      &.page-4 {
-        background-color: #ecc5a9;
-      }
-      &.page-5 {
-        background-color: #8ff3f3;
-      }
-      &.page-6 {
-        background-color: #cfbe94;
-      }
-    }
-  }
+
 </style>

@@ -3,7 +3,7 @@ import colors from 'windicss/colors'
 import plugin from 'windicss/plugin'
 
 export default defineConfig({
-  darkMode: 'class', // or 'media'
+  darkMode: 'media', // or 'media'
   theme: {
     extend: {
       screens: {
@@ -12,6 +12,12 @@ export default defineConfig({
         'lg': '1024px',
         'xl': '1280px',
         '2xl': '1536px',
+        extend: {
+          screens: {
+            light: { raw: '(prefers-color-scheme: light)' },
+            dark: { raw: '(prefers-color-scheme: dark)' }
+          }
+        }
       },
       colors: {
         gray: colors.coolGray,
