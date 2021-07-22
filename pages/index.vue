@@ -1,13 +1,13 @@
 <template>
   <div id="landing_page">
-    <div class="page page1 home grid grid-cols-1 xl:grid-cols-2 place-items-center dark: bg-gray-300 dark:text-white dark:bg-gray-900">
-      <div>
+    <div class="page page1 p-20 xl:pt-0 grid grid-cols-1 xl:grid-cols-2 place-items-center bg-gray-300 dark:text-white dark:bg-gray-900 h-screen">
+      <div class="order-last xl:order-first">
         <div class="mb-6">
           <span
             id="hello"
-            class="bubble"
+            class="bubble bg-primary text-[14px] leading-[24px] tracking-[0.04em] font-extrabold py-[10px] px-[30px] rounded-br-[20px] rounded-tl-[20px] rounded-tr-[20px]"
           >
-            <small class="hello_text">
+            <small class="text-black">
               Hello, I'm
             </small>
           </span>
@@ -27,7 +27,7 @@
         </div>
         <div
           id="profession"
-          class="text-2xl mb-7"
+          class="text-2xl mb-7 tracking-[0.01em]"
         >
           Designer
         </div>
@@ -42,7 +42,7 @@
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                class="svg_icon mr-6"
+                class="svg_icon dark:fill-[#fff] mr-6"
               >
                 <path d="M20,4H4C2.896,4,2,4.896,2,6v12c0,1.104,0.896,2,2,2h16c1.104,0,2-0.896,2-2V6C22,4.896,21.104,4,20,4z M20,8.7l-8,5.334 L4,8.7V6.297l8,5.333l8-5.333V8.7z" />
               </svg>
@@ -57,7 +57,7 @@
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                class="svg_icon mr-6"
+                class="svg_icon dark:fill-[#fff] mr-6"
               >
                 <path d="M20.487,17.14l-4.065-3.696c-0.399-0.363-1.015-0.344-1.391,0.043l-2.393,2.461c-0.576-0.11-1.734-0.471-2.926-1.66 c-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394c0.388-0.376,0.406-0.991,0.043-1.391L6.859,3.513 c-0.363-0.401-0.98-0.439-1.391-0.087l-2.17,1.861C3.125,5.461,3.022,5.691,3.008,5.936c-0.015,0.25-0.301,6.172,4.291,10.766 C11.305,20.707,16.323,21,17.705,21c0.202,0,0.326-0.006,0.359-0.008c0.245-0.014,0.475-0.117,0.648-0.291l1.86-2.171 C20.926,18.119,20.887,17.503,20.487,17.14z" />
               </svg>
@@ -72,7 +72,7 @@
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                class="svg_icon mr-6"
+                class="svg_icon dark:fill-[#fff] mr-6"
               >
                 <path d="M2.002,9.538c-0.023,0.411,0.207,0.794,0.581,0.966l7.504,3.442l3.442,7.503c0.164,0.356,0.52,0.583,0.909,0.583 c0.019,0,0.037-0.001,0.057-0.002c0.41-0.022,0.765-0.295,0.894-0.686l5.595-17.032c0.117-0.358,0.023-0.753-0.243-1.02 s-0.66-0.358-1.02-0.243L2.688,8.645C2.297,8.773,2.024,9.128,2.002,9.538z" />
               </svg>
@@ -85,23 +85,23 @@
         <img
           src="~/assets/profile-img.webp"
           alt=""
-          class="profile_image rounded-full"
+          class="profile_image rounded-full w-[300] h-[300px] xl:w-[450] xl:h-[450px]"
         />
       </figure>
     </div>
-    <div class="page page2">
+    <div class="page page2 bg-gray-300 dark:text-white dark:bg-gray-800 h-screen">
       2
     </div>
-    <div class="page page3">
+    <div class="page page3 bg-gray-300 dark:text-white dark:bg-gray-700 h-screen">
       3
     </div>
-    <div class="page page4">
+    <div class="page page4 bg-gray-300 dark:text-white dark:bg-gray-600 h-screen">
       4
     </div>
-    <div class="page page5">
+    <div class="page page5 bg-gray-300 dark:text-white dark:bg-gray-500 h-screen">
       5
     </div>
-    <div class="page page6">
+    <div class="page page6 bg-gray-300 dark:text-white dark:bg-gray-400 h-screen">
       6
     </div>
   </div>
@@ -116,91 +116,6 @@ export default {
   head () {
     return {
       title: 'Home'
-    }
-  },
-  mounted() {
-    this.animateOnScroll();
-    let pages = document.querySelectorAll(".page");
-    for (let i = 0; i < pages.length; i++) {
-      const scene = this.$scrollmagic
-        .scene({
-          triggerElement: pages[i],
-        })
-        //.setPin(pages[i], { pushFollowers: false })
-        .addIndicators({ name: "scene" + [i] });
-      this.$scrollmagic.addScene(scene);
-    }
-    this.anima()
-     /*const scene1 = this.$scrollmagic
-       .scene({
-         triggerElement: ".page-3",
-         triggerHook: 0,
-         duration: "100%",
-       })
-       //.setPin(".page3", { pushFollowers: false })
-       //.addIndicators({ name: "scene1" });
-     this.$scrollmagic.addScene(scene1);*/
-  },
-  methods: {
-    animateOnScroll() {
-      this.$gsap.to('#name , #profession, #email, #phone, #location', {
-        x: -700,
-        stagger: 0.5,
-        ease: 'Power1.easeInOut',
-        scrollTrigger: {
-          trigger: '.page1',
-          pin: true,
-          // end: 'bottom',
-          scrub: true
-        }
-      },
-      this.$gsap.to('.fig', {
-        x: 1800,
-        stagger: 0.5,
-        ease: 'Power1.easeInOut',
-        scrollTrigger: {
-          trigger: '.page1',
-          pin: true,
-          end: 'bottom',
-          scrub: true
-        }
-      }))
-    },
-    anima( ) {
-      const tl = this.$gsap.timeline({repeat: 0, repeatDelay: 0 });
-      tl.fromTo('span#hello.bubble',
-        {
-          x: -800,
-          scale: 0.8
-        },
-        {
-          x: 0,
-          scale: 2,
-          duration: 1
-        }
-      )
-      tl.fromTo('#name , #profession, #email, #phone, #location',
-        {
-          x: -700
-        },
-        {
-          x: 0,
-          duration: 2,
-          stagger: 0.5
-        }
-      )
-      tl.fromTo('.fig',
-        {
-          x: 1800
-        },
-        {
-          x: 0,
-          scale: 1.2,
-          duration: 2,
-          stagger: 1
-        },
-        "-=2"
-      )
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 place-items-center justify-between">
+  <div class="grid grid-cols-2 place-items-center justify-between py-[20px]">
     <div>
       <!--      Header Logo Section-->
       <NuxtLink
@@ -28,7 +28,7 @@
         </svg>
       </NuxtLink>
     </div>
-    <div>
+    <div class="invisible xl:visible">
       <!--      Header Nav Links Section-->
       <NuxtLink
         v-for="link in navLinks"
@@ -36,7 +36,7 @@
         text
         :to="link.to"
         :aria-label="link.label"
-        class="nuxt-link dark:text-white"
+        class="nuxt-link dark:text-white m-[20px]"
       >
         {{ link.text }}
       </NuxtLink>

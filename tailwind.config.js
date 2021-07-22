@@ -24,10 +24,22 @@ export default defineConfig({
         blue: colors.lightBlue,
         red: colors.rose,
         pink: colors.fuchsia,
+        'primary': 'hsla(170, 90%, 43%, 1.0)',
+        'primary-50': 'hsla(170, 90%, 43%, 0.5)',
+        'secondary': 'hsla(211, 28%, 29%, 1.0)',
+        'white': 'hsla(0, 0%, 100%, 1.0)',
+        'white-50': 'hsla(0, 0%, 100%, 0.5)',
+        'black': 'hsla(0, 0%, 0%, 1.0)',
+        'facebook': 'hsla(220, 46%, 48%, 1.0)',
+        'twitter': 'hsla(206, 88%, 59%, 1.0)',
+        'google': 'hsla(5, 81%, 56%, 1.0)',
+        'linkedin': 'hsla(206, 64%, 43%, 1.0)',
+        'primary-text' : '#2c3e50',
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
+        uirounded: ['SF Pro Rounded', 'sans-serif']
       },
       extend: {
         spacing: {
@@ -69,16 +81,6 @@ export default defineConfig({
         '.btn-red': {
           'backgroundColor': '#e3342f',
           'color': '#fff',
-          'primary': 'hsla(170, 90%, 43%, 1.0)',
-          'primary-50': 'hsla(170, 90%, 43%, 0.5)',
-          'secondary': 'hsla(211, 28%, 29%, 1.0)',
-          'white': 'hsla(0, 0%, 100%, 1.0)',
-          'white-50': 'hsla(0, 0%, 100%, 0.5)',
-          'black': 'hsla(0, 0%, 0%, 1.0)',
-          'facebook': 'hsla(220, 46%, 48%, 1.0)',
-          'twitter': 'hsla(206, 88%, 59%, 1.0)',
-          'google': 'hsla(5, 81%, 56%, 1.0)',
-          'linkedin': 'hsla(206, 64%, 43%, 1.0)',
           '&:hover': {
             backgroundColor: '#cc1f1a',
           },
