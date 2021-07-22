@@ -36,7 +36,7 @@
         text
         :to="link.to"
         :aria-label="link.label"
-        class="nuxt-link dark:text-white m-[20px]"
+        class="portfolio_nuxt_link"
       >
         {{ link.text }}
       </NuxtLink>

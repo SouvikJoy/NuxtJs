@@ -1,5 +1,8 @@
 <template>
-  <div id="about">
+  <div
+    id="about"
+    class="grid place-items-center h-screen"
+  >
     About
   </div>
 </template>
