@@ -90,19 +90,42 @@
       id="page_2"
       class="index_page_2"
     >
-      <div>
+      <div class="about_me z-10 px-[40px]">
+        <h1 class="text-[40px] mb-4 font-bold">
+          About Me
+        </h1>
+        <p class="mb-8">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          <br />
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        <ul>
+          <li
+            v-for="item in items"
+            :key="item.name"
+            class="lang_name"
+          >
+            <span>
+              {{ item.name }}
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="index_page_2_container">
         <svg
-          width="481"
-          height="439"
-          viewBox="0 0 481 439"
+          width="800"
+          height="600"
+          viewBox="0 0 600 600"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          class="character z-20"
         >
           <g id="animated_character">
             <path
               id="circle_behind_character"
               d="M329.661 328.844C390.2 268.305 390.2 170.153 329.661 109.615C269.123 49.0761 170.971 49.0761 110.432 109.615C49.8936 170.153 49.8937 268.305 110.432 328.844C170.971 389.382 269.123 389.382 329.661 328.844Z"
-              fill="#E0F3FF"
+              class="character_circle"
+              fill="url(#paint_linear)"
             />
             <g id="wrench">
               <path
@@ -1130,6 +1153,22 @@
             </g>
           </g>
           <defs>
+            <linearGradient
+              id="paint_linear"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                style="stop-color:rgb(28, 238, 112);stop-opacity:1"
+              />
+              <stop
+                offset="100%"
+                style="stop-color:rgba(224, 243, 255);stop-opacity:1"
+              />
+            </linearGradient>
             <linearGradient
               id="paint0_linear"
               x1="119.133"
@@ -2450,26 +2489,6 @@
           </defs>
         </svg>
       </div>
-      <div>
-        <h1 class="text-[40px] mb-4 font-bold">
-          About Me
-        </h1>
-        <p class="mb-8">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </p>
-        <ul>
-          <li
-            v-for="item in items"
-            :key="item.name"
-            class="lang_name"
-          >
-            <span>
-              {{ item.name }}
-            </span>
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </template>
@@ -2535,6 +2554,193 @@ export default {
             scrub: true
           }
         },
+      )
+      const tl = this.$gsap.timeline({ repeat:0 , duration: 3000 })
+      tl.set('.about_me',
+        {
+          scale: 0,
+          opacity: 0
+        }
+      )
+      tl.set('.character',
+        {
+          x: 500,
+          scale: 2
+        }
+      )
+      tl.fromTo('.character',
+        {
+          scale: 2,
+          x:500,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+        {
+          scale: 2,
+          x:500,
+          ease: "power2.inOut",
+          triggerHook: 0,
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+      )
+      tl.fromTo('.character',
+        {
+          x: 500,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+        {
+          x: 500,
+          y: 150,
+          triggerHook: 0,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+      )
+      tl.fromTo('.character',
+        {
+          x: 500,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+        {
+          x: 500,
+          y: 0,
+          scale: 1,
+          triggerHook: 0,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+      )
+      tl.fromTo('.character',
+        {
+          x: 500,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+        {
+          x: 0,
+          y: 0,
+          scale: 1,
+          triggerHook: 0,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+      )
+      tl.fromTo('.about_me',
+        {
+          x: -500,
+          //y: -400,
+          opacity: 0,
+          ease: "power3.inOut",
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+        {
+          x: 0,
+          //y: 0,
+          opacity: 1,
+          scale: 1,
+          z: 10,
+          ease: "power2.inOut",
+          duration: 40,
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+      )
+      this.$gsap.fromTo('#small_purple_rectangle, #purple_rectangle_with_file, #sky_blue_rectangle_right, #small_sky_blue_rectangle, #big_blue_rectangle, #purple_rectangle, #wrench, #nut, #most_big_rectangle',
+        {
+          transformX: -350,
+          transformY: -500,
+          scale: 0.5,
+          duration: 30,
+          //repeat: -1,
+          repeatDelay: 0,
+          yoyo: true,
+          ease: "power1.inOut",
+          stagger: 3,
+          motionPath: {
+            path: 'M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z',
+            align: "self",
+            alignOrigin: [0.5, 0.5]
+          },
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        },
+        {
+          transformX: 350,
+          transformY: 500,
+          scale: 1.5,
+          duration: 30,
+          //repeat: -1,
+          repeatDelay: 0,
+          yoyo: true,
+          ease: "power1.inOut",
+          stagger: 0.5,
+          motionPath: {
+            path: 'M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z M45.35 181.679L46.34 158.729H16.3L17.53 181.609L45.35 181.679Z',
+            align: "self",
+            alignOrigin: [0.5, 0.5]
+          },
+          scrollTrigger: {
+            trigger: '.index_page_2',
+            //pin: true,
+            end: 'bottom',
+            scrub: true
+          }
+        }
       )
     }
   }

@@ -27,10 +27,22 @@ export default {
     TheHeader
   },
   mounted() {
-
+    this.animateOnScroll()
   },
   methods: {
-
+    animateOnScroll () {
+      const scene1 = this.$scrollmagic.scene({
+        triggerElement: '.default_main',
+        triggerHook: 0,
+        duration: "100%"
+      })
+        .setTween('.default_header', {
+          backgroundColor: 'hsla(211, 29%, 24%, 1.0)',
+          position: 'fixed'
+        })
+      .addIndicators()
+      this.$scrollmagic.addScene(scene1)
+    }
   }
 }
 </script>

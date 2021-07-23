@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio_header">
-    <div>
+    <div class="ml-[10px]">
       <!--      Header Logo Section-->
       <NuxtLink
         :to="{ name: 'index' }"
