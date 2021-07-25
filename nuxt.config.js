@@ -14,6 +14,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  script: [
+    {
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js'
+    }
+  ],
   vue: {
     config: {
       productionTip: false,
@@ -27,15 +32,16 @@ export default {
   css: [
     '~assets/sass/main.scss'
   ],
-  plugins: [{
-    src: '~/plugins/vue-scrollmagic.js',
-    ssr: false
-  }],
+  plugins: [
+    {
+      src: '~/plugins/vue-scrollmagic',
+      ssr: false
+    }
+  ],
   components: false,
   buildModules: [
     '@nuxtjs/eslint-module',
-    'nuxt-windicss',
-    '@aceforth/nuxt-optimized-images',
+    'nuxt-windicss'
   ],
   windicss: {
     scan: {
@@ -57,9 +63,6 @@ export default {
         'nuxt-img': 'img',
       },
     },
-  },
-  optimizedImages: {
-    optimizeImages: true
   },
   modules: [
     '@nuxtjs/axios',

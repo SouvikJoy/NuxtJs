@@ -1,22 +1,18 @@
 <template>
   <div
-    class="grid place-items-center h-screen"
+    id="about"
+    class="grid place-items-center h-screen back"
   >
-    About us
+    about us
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
-  head () {
-    return {
-      title: 'About'
-    }
-  }
-};
+  name: 'About'
+}
 </script>
 
-<style lang="scss">
+<style>
 
 </style>
