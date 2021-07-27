@@ -30,22 +30,23 @@ export default defineConfig({
   shortcuts: {
     // Default
     default_app: 'font-uirounded text-secondary bg-transparent',
-    default_header: 'bg-gray-300 dark:bg-gray-900 w-screen z-[40] fixed',
+    default_header: 'bg-gray-300 dark:bg-gray-900 w-screen z-40 fixed',
     default_footer: 'text-center text-white bg-secondary',
     //Component
-    portfolio_header: 'flex place-items-center justify-around py-[20px] h-[10vh]',
+    portfolio_header: 'flex place-items-center justify-around py-[10px] h-[8vh]',
     portfolio_footer: 'flex place-items-center justify-center',
     // Router
     portfolio_nuxt_link: 'text-secondary dark:text-white m-[20px] hover:(border-b-solid border-b-[3px] border-b-primary)',
     portfolio_nuxt_link_exact_active:'font-bolder border-b-solid border-b-[3px] border-b-primary',
     // Index Page-1
     index_page_1: 'p-20 xl:pt-0 grid grid-cols-1 xl:grid-cols-2 place-items-center bg-gray-300 dark:text-white dark:bg-gray-900 h-screen',
-    index_page_1_container: 'order-last xl:order-first',
+    //index_page_1: 'p-20 xl:pt-0 grid grid-cols-1 xl:grid-cols-2 place-items-center h-screen bg-no-repeat bg-cover text-white dark:bg-gray-900',
+    index_page_1_container: 'order-last xl:order-first z-30',
     index_page_1_greeting_bubble_container: 'mb-6',
     index_page_1_greeting_bubble: 'bg-primary leading-[24px] tracking-[0.04em] py-[10px] px-[30px] rounded-br-[20px] rounded-tl-[20px] rounded-tr-[20px]',
     index_page_1_greeting_bubble_text: 'text-black text-[14px] font-bold ',
     index_page_1_portfolio_author_name: 'text-6xl my-2.5 font-bold',
-    index_page_1_portfolio_author_profession: 'text-2xl mb-7 tracking-[0.01em]',
+    index_page_1_portfolio_author_profession: 'text-lg mb-7 tracking-[0.05em] text-primary',
     index_page_1_portfolio_author_email_container: 'flex place-items-center hover:fill-primary dark:fill-white',
     index_page_1_portfolio_author_email: 'mr-6',
     index_page_1_portfolio_author_phone_container: 'flex place-items-center my-2.5 hover:fill-primary dark:fill-white',
@@ -64,7 +65,7 @@ export default defineConfig({
     character_circle: 'fill-[]',
 
     //shapes
-    lang_name: 'inline-block bg-transparent leading-[24px] tracking-[0.04em] py-[10px] mr-[10px] my-[10px]  px-[20px] rounded-br-[20px] rounded-tl-[20px] rounded-tr-[20px] border-solid border-[5px] border-primary',
+    lang_name: 'inline-block bg-transparent leading-[24px] tracking-[0.04em] py-[10px] mr-[10px] my-[10px]  px-[20px] rounded-br-[20px] rounded-tl-[20px] rounded-tr-[3px] border-solid border-[2px] border-primary hover:(bg-primary text-secondary)',
     shape_hexagon: 'relative w-[300px] h-[150px] bg-primary my-[90px] mx-[0] before:(content \'\' absolute w-0 border-l-[150px] border-l-solid border-l-transparent border-r-[150px] border-r-solid border-r-transparent bottom-[100%] border-b-[87px] border-b-solid border-b-primary) after:(content \'\' absolute w-0 border-l-[150px] border-l-solid border-l-transparent border-r-[150px] border-r-solid border-r-transparent top-[100%] border-t-[87px] border-t-solid border-t-primary)'
 
 
