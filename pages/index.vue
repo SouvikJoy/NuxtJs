@@ -42,7 +42,9 @@
               >
                 <path d="M20,4H4C2.896,4,2,4.896,2,6v12c0,1.104,0.896,2,2,2h16c1.104,0,2-0.896,2-2V6C22,4.896,21.104,4,20,4z M20,8.7l-8,5.334 L4,8.7V6.297l8,5.333l8-5.333V8.7z" />
               </svg>
-              {{ author.email }}
+              <a href="mailto:souviksahajoy@gmail.com?subject=About Hiring You as A Developer.">
+                souviksahajoy@gmail.com
+              </a>
             </li>
             <li
               class="index_page_1_portfolio_author_phone_container"
@@ -56,7 +58,7 @@
               >
                 <path d="M20.487,17.14l-4.065-3.696c-0.399-0.363-1.015-0.344-1.391,0.043l-2.393,2.461c-0.576-0.11-1.734-0.471-2.926-1.66 c-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394c0.388-0.376,0.406-0.991,0.043-1.391L6.859,3.513 c-0.363-0.401-0.98-0.439-1.391-0.087l-2.17,1.861C3.125,5.461,3.022,5.691,3.008,5.936c-0.015,0.25-0.301,6.172,4.291,10.766 C11.305,20.707,16.323,21,17.705,21c0.202,0,0.326-0.006,0.359-0.008c0.245-0.014,0.475-0.117,0.648-0.291l1.86-2.171 C20.926,18.119,20.887,17.503,20.487,17.14z" />
               </svg>
-              {{ author.cell }}
+              <a href="tel:+8809638796021">+8809638796021</a>
             </li>
             <li
               class="index_page_1_portfolio_author_location_container"
@@ -145,8 +147,6 @@ export default {
     author: {
       name: 'Souvik Joy',
       designation: 'UI/UX Designer & Frontend Web Developer',
-      email: 'souviksahajoy@gmail.com',
-      cell: '+8809638796021',
       address: '109/5, Hatembag, Rayer Bazaar, Dhaka-1209'
     },
     items: [
